@@ -1,0 +1,10 @@
+models/
+data/*.json
+data/*.csv
+!data/training_data_example.csv
+logs/
+__pycache__/
+*.pyc
+*.pkl
+.DS_Store
+

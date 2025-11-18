@@ -1,0 +1,17 @@
+name,description,severity,cve,cwe,file,line,message,is_real_threat
+SQL Injection,Potential SQL injection vulnerability detected in user input handling. User input is directly concatenated into SQL query without proper sanitization.,HIGH,CVE-2024-12345,CWE-89,src/api/users.ts,42,User input directly concatenated in SQL query,1
+Cross-Site Scripting (XSS),Cross-site scripting vulnerability in user comments section. User input is rendered without proper sanitization.,MEDIUM,CVE-2024-12346,CWE-79,src/components/Comment.tsx,15,User input not sanitized before rendering,1
+Deprecated Function Usage,Using deprecated function in test file. This is not a security issue but a code quality warning.,LOW,,,tests/example.test.js,10,Using deprecated function for testing purposes,0
+Hardcoded Password,Hardcoded password found in configuration file. This is a critical security vulnerability.,CRITICAL,CVE-2024-12347,CWE-798,config/database.js,5,Password hardcoded in source code,1
+Missing Authentication,API endpoint missing authentication check. This could allow unauthorized access.,HIGH,CVE-2024-12348,CWE-306,src/api/admin.ts,28,Endpoint does not verify user authentication,1
+Unused Import,Unused import statement. This is just a code quality issue not a security vulnerability.,INFO,,,src/utils/helpers.ts,3,Unused import detected,0
+Command Injection,Command injection vulnerability in system call. User input is directly passed to system command.,CRITICAL,CVE-2024-12349,CWE-78,src/utils/system.ts,12,User input passed to system command without sanitization,1
+Path Traversal,Path traversal vulnerability in file access. User input is used to construct file paths without validation.,HIGH,CVE-2024-12350,CWE-22,src/api/files.ts,35,File path constructed from user input without validation,1
+Weak Encryption,Using weak encryption algorithm. This may not be exploitable in current context.,MEDIUM,,,src/utils/crypto.ts,8,Weak encryption algorithm used,1
+Code Comment,Code comment contains sensitive information. This is informational only.,INFO,,,src/api/config.ts,20,Comment contains API key example,0
+Test Data,Test data in test file. This is not a security issue.,LOW,,,tests/integration.test.js,5,Test data in test file,0
+Session Fixation,Session fixation vulnerability. Session ID is not regenerated after login.,HIGH,CVE-2024-12351,CWE-384,src/auth/session.ts,45,Session ID not regenerated after authentication,1
+CSRF Vulnerability,Missing CSRF token validation. Forms are vulnerable to cross-site request forgery.,MEDIUM,CVE-2024-12352,CWE-352,src/components/Form.tsx,22,CSRF token not validated,1
+Information Disclosure,Error message reveals sensitive information about system internals.,MEDIUM,,,src/api/error.ts,10,Error message reveals system information,1
+Unused Variable,Unused variable in code. This is a code quality issue.,INFO,,,src/utils/helpers.ts,15,Unused variable declared,0
+

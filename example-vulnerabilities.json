@@ -1,0 +1,74 @@
+[
+  {
+    "id": "vuln-1",
+    "name": "SQL Injection",
+    "description": "Potential SQL injection vulnerability detected in user input handling. User input is directly concatenated into SQL query without proper sanitization.",
+    "severity": "HIGH",
+    "cwe": "CWE-89",
+    "cve": "CVE-2024-12345",
+    "file": "src/api/users.ts",
+    "line": 42,
+    "rule": "sql-injection",
+    "message": "User input directly concatenated in SQL query",
+    "confidence": 0.85
+  },
+  {
+    "id": "vuln-2",
+    "name": "Cross-Site Scripting (XSS)",
+    "description": "Cross-site scripting vulnerability in user comments section. User input is rendered without proper sanitization.",
+    "severity": "MEDIUM",
+    "cwe": "CWE-79",
+    "file": "src/components/Comment.tsx",
+    "line": 15,
+    "rule": "xss",
+    "message": "User input not sanitized before rendering",
+    "confidence": 0.75
+  },
+  {
+    "id": "vuln-3",
+    "name": "Deprecated Function Usage",
+    "description": "Using deprecated function in test file. This is not a security issue but a code quality warning.",
+    "severity": "LOW",
+    "file": "tests/example.test.js",
+    "line": 10,
+    "rule": "deprecated",
+    "message": "Using deprecated function for testing purposes",
+    "confidence": 0.3
+  },
+  {
+    "id": "vuln-4",
+    "name": "Hardcoded Password",
+    "description": "Hardcoded password found in configuration file. This is a critical security vulnerability.",
+    "severity": "CRITICAL",
+    "cwe": "CWE-798",
+    "file": "config/database.js",
+    "line": 5,
+    "rule": "hardcoded-secret",
+    "message": "Password hardcoded in source code",
+    "confidence": 0.95
+  },
+  {
+    "id": "vuln-5",
+    "name": "Missing Authentication",
+    "description": "API endpoint missing authentication check. This could allow unauthorized access.",
+    "severity": "HIGH",
+    "cwe": "CWE-306",
+    "file": "src/api/admin.ts",
+    "line": 28,
+    "rule": "missing-auth",
+    "message": "Endpoint does not verify user authentication",
+    "confidence": 0.8
+  },
+  {
+    "id": "vuln-6",
+    "name": "Unused Import",
+    "description": "Unused import statement. This is just a code quality issue, not a security vulnerability.",
+    "severity": "INFO",
+    "file": "src/utils/helpers.ts",
+    "line": 3,
+    "rule": "unused-import",
+    "message": "Unused import detected",
+    "confidence": 0.1
+  }
+]
+
